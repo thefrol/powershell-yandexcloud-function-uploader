@@ -45,7 +45,7 @@
 
 # TODO
 
-+ [ ] add .* by default to the .ycloud_conf
++ [x] add .* by default to the .ycloud_conf
 + [ ] .ycloud-conf looks better
 + [ ] Init by language
 + [x] -Debug, printing excluded files and stuff

@@ -90,6 +90,7 @@ if($Init){
     Add-Content -Path $ignoreFile $configFile
     Add-Content -Path $ignoreFile $ignoreFile
     Add-Content -Path $ignoreFile .gitignore
+    Add-Content -Path .*
     Write-Host "Created upload ignore file($ignoreFile)"
 
 
