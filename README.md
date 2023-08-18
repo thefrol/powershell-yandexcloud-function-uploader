@@ -48,6 +48,7 @@
 + [ ] add .* by default to the .ycloud_conf
 + [ ] .ycloud-conf looks better
 + [ ] Init by language
-+ [ ] -Debug, printing excluded files and stuff
++ [x] -Debug, printing excluded files and stuff
++ [ ] How verbosity works in Powershell, like Write-Debug and other verbosity params
 + [ ] use of service accounts
 + [ ] check for updates of script

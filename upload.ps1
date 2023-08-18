@@ -5,7 +5,10 @@ param (
     $Init=$false,
     [Parameter(HelpMessage="A profile settings to use, ex. dev, prod")]
     [String]
-    $Environment=""
+    $Environment="",
+    [Parameter(HelpMessage="Enable additional debug verbosity")]
+    [switch]
+    $Debug=""
 )
 
 $canStart=$true # True if all requirements satified
@@ -135,11 +138,17 @@ $ignored+=$MyInvocation.InvocationName # this script
 $zipfile="archive$(New-Guid).zip"
 
 Get-ChildItem -Exclude $ignored | Compress-Archive -DestinationPath $zipfile
-
+if($Debug){
+    Write-Host "Excluded files: "
+    Get-ChildItem -Exclude $ignored 
+}
 
 #Uploading
 $runString+=" --source-path $zipfile"
-write-Host $runString
+if($Debug){
+    Write-Host $runString
+}
+
 Invoke-Expression $runString
 
 Remove-Item $zipfile
