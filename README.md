@@ -40,6 +40,9 @@
 
     ./update
 
+# Что дальше
+Будет создан специальный модуль для PowerShell c установкой из репозитория
+
 # TODO
 
 [ ] add .* by default to the .ycloud_conf
@@ -47,3 +50,4 @@
 [ ] Init by language
 [ ] -Debug, printing excluded files and stuff
 [ ] use of service accounts
+[ ] check for updates of script
