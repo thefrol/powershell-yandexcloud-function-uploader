@@ -5,10 +5,7 @@ param (
     $Init=$false,
     [Parameter(HelpMessage="A profile settings to use, ex. dev, prod")]
     [String]
-    $Environment="",
-    [Parameter(HelpMessage="Enable additional debug verbosity")]
-    [switch]
-    $Debug=""
+    $Environment=""
 )
 
 $canStart=$true # True if all requirements satified
